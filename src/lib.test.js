@@ -4,6 +4,7 @@ import {
   getLastName,
   merge2ArraysIntoAnArrayOfObjects,
 } from "./lib";
+// imported external data from the lib.js and vitest testing library
 
 describe("getLastName", () => {
   it("returns the last name from a full name", () => {
@@ -20,7 +21,7 @@ describe("getLastName", () => {
 
   it("returns the last name from a full name with extra spaces", () => {
     // Arrange
-    const fullName = "John    Doe";
+    const fullName = "John    Doe"; // creepy name man expects you to call him john
     const expected = "Doe";
 
     // Act
@@ -68,14 +69,14 @@ describe("getLastName", () => {
 
   it("returns the last name from a full name with special characters", () => {
     // Arrange
-    const fullName = "Starsky & Hutch";
+    const fullName = "Starsky & Hutch"; // these are 2 different people
     const expected = "Hutch";
 
     // Act
     const result = getLastName(fullName);
 
     // Assert
-    expect(result).toBe(expected);
+    expect(result).toBe(expected); // what kind of jerk ignores hutch being your friend?
   });
 });
 
@@ -219,3 +220,8 @@ describe("filterItemsByTerm", () => {
     expect(result.terms2).toEqual(expected.terms2);
   });
 });
+
+// This test suite is for the lib.js file, which contains the filterItemsByTerm, getLastName, and merge2ArraysIntoAnArrayOfObjects functions used in various set-ups for a search engine/ data manipulation tool by summary.
+// filtering items by a term or a character or a partial term, getting the last name from a full name, and merging two arrays into an array of objects.
+
+// format of the test suite aided by math vitest library

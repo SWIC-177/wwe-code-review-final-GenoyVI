@@ -22,3 +22,5 @@ module.exports = {
     "no-param-reassign": "warn",
   },
 };
+// the rules object is used to set the rules for the linter. the rules are set to warn the user of the console, no-param-reassign,  import, etc.
+// airbnb

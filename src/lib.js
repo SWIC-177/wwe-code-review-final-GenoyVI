@@ -9,6 +9,9 @@ export function getLastName(fullName) {
   return splitName[splitName.length - 1];
 }
 
+// console printing with trim and split methods to get the last name from a full name string; the last name is then returned
+// the function is then exported for use in other files
+
 /**
  * Merges two arrays into an array of objects based on specified keys.
  *
@@ -32,7 +35,7 @@ export function merge2ArraysIntoAnArrayOfObjects({ a1, a2, key1, key2 }) {
     ];
   }, []);
 }
-
+// very easy t o look at and see what this does, it merges two arrays into an array of objects based on specified keys. export is again necessary for use in other files
 /**
  * Filters items by a given term.
  *
@@ -56,8 +59,8 @@ export function filterItemsByTerm({
 
           // If `is2Keep` is true, keep the terms that include the action term.
           if (
-            is2Keep &&
-            term.toLowerCase().includes(actionTerm.toLowerCase())
+            is2Keep && //
+            term.toLowerCase().includes(actionTerm.toLowerCase()) // if the term includes the action term then the terms are kept
           ) {
             accumulatedResults2Modify.terms1 = [
               ...accumulatedResults2Modify.terms1,
@@ -89,4 +92,6 @@ export function filterItemsByTerm({
         { terms1: [], terms2: [] },
       )
     : { terms1, terms2 };
-}
+} // keeping terms that include the action term and removing terms that include the action term based on the boolean value of `is2Keep`
+
+// export making all the functions across the library into a open source codebase.
